@@ -5,9 +5,12 @@ import java.util.ArrayList;
 public class Camionero extends Empleado{
     private String licencia;
     private Camion camion;
+    private ArrayList<InformeCarga>listaDeInformes = new ArrayList<InformeCarga>() ;
 
-    public InformaCarga generarInforme(Material material, Double cantidad){
-        return new InformaCarga(material,cantidad) ;
+    public ArrayList<InformeCarga> generarInforme(Material material, Double cantidad){
+
+        listaDeInformes.add(new InformeCarga(material,cantidad));
+        return listaDeInformes ;
     }
     public String getLicencia() {
         return licencia;
@@ -25,9 +28,17 @@ public class Camionero extends Empleado{
         this.camion = camion;
     }
 
-    public Camionero(int legajo, String nombre, String apellido, boolean estaTrabajando, String licencia, Camion camion) {
-        super(legajo, nombre, apellido, estaTrabajando);
+    public Camionero(int legajo, String nombre, String apellido,String clave, boolean estaTrabajando, String licencia, Camion camion) {
+        super(legajo, nombre, apellido, clave,estaTrabajando);
         this.licencia = licencia;
         this.camion = camion;
+    }
+
+    public ArrayList<InformeCarga> getListaDeInformes() {
+        return listaDeInformes;
+    }
+
+    public void setListaDeInformes(ArrayList<InformeCarga> listaDeInformes) {
+        this.listaDeInformes = listaDeInformes;
     }
 }

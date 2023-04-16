@@ -1,6 +1,6 @@
 package Logica;
 
-public class InformaCarga {
+public class InformeCarga {
     private Material material;
     private Double cantidad;
 
@@ -20,7 +20,7 @@ public class InformaCarga {
         this.cantidad = cantidad;
     }
 
-    public InformaCarga(Material material, Double cantidad) {
+    public InformeCarga(Material material, Double cantidad) {
         this.material = material;
         this.cantidad = cantidad;
     }
