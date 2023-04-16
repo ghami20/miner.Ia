@@ -2,6 +2,9 @@ package Interfaz;
 
 import Logica.*;
 
+import javax.swing.*;
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -17,6 +20,13 @@ public class Main {
         System.out.println(c1.getListaDeInformes().get(1).getMaterial().getNombre());
 
 
+        JOptionPane.showMessageDialog(null,"Bienvenido");
+       int legajo= Integer.parseInt(JOptionPane.showInputDialog("ingrese legajo"));
+        String clave=JOptionPane.showInputDialog("ingrese clave");
+        c1.login(legajo,clave);
+        if (c1.login(legajo,clave)){
+            JOptionPane.showMessageDialog(null,"Puede entrar");
+        }else   JOptionPane.showMessageDialog(null,"No Puede entrar");
 
 
 
