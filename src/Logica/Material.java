@@ -12,6 +12,14 @@ public class Material {
         this.precioIdeal = precioIdeal;
     }
 
+    @Override
+    public String toString() {
+        return "Material " +
+                "nombre=' " + nombre + '\'' +
+                ", pureza= " + pureza +
+                ", precioIdeal=" + precioIdeal ;
+    }
+
     public String getNombre() {
         return nombre;
     }

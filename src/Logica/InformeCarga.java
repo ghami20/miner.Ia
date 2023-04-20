@@ -4,6 +4,12 @@ public class InformeCarga {
     private Material material;
     private Double cantidad;
 
+    @Override
+    public String toString() {
+        return "Informe de Carga " + material +
+                ", cantidad= " + cantidad ;
+    }
+
     public Material getMaterial() {
         return material;
     }
