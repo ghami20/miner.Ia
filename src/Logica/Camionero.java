@@ -12,6 +12,12 @@ public class Camionero extends Empleado{
         listaDeInformes.add(new InformeCarga(material,cantidad));
         return listaDeInformes ;
     }
+
+    public ArrayList<InformeCarga> verInformes(){
+
+        return this.getListaDeInformes();
+
+    }
     public String getLicencia() {
         return licencia;
     }
