@@ -50,5 +50,18 @@ public class Main {
     //falta acomodar esto, lenar el deposito, puede ser pidiendo en generar informe donde se descargo el informe y actualizar la capacidad del deposito
         System.out.println(encargado1.revisarStock()
         );
+
+        //probar crear clientes
+        //segun la logica cacda vendeor tiene una lista de clientes
+        //creo al cliente y lo guardo en lista de clientes
+        vendedor1.crearCliente("StarX","3585895","144444444","Elon Musk");
+        //muestro la lista de clientes
+        String acum="";
+        for (Cliente clientes:vendedor1.getClientes()
+             ) {
+            acum=acum+clientes+"\n";
+        }
+        System.out.println(acum);
+
     }
 }
