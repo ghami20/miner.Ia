@@ -71,4 +71,15 @@ public class Empleado {
     public void setClave(String clave) {
         this.clave = clave;
     }
+
+    public boolean login(String clave) {
+        
+        if(clave.equals(this.getClave())) {
+            return true;
+                }else {
+                    return false;
+                            }
+
+} 
+
 }
